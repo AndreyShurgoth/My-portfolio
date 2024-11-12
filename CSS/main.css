@@ -1,0 +1,553 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.skills .skill-button {
+    background-color: #f0f0f0;
+    color: #000000;
+    border: 2px solid #ddd;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Темна тема */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-theme .skills .skills-buttom {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border: 2px solid #555555 !important;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.dark-theme .skills-buttom {
+    background-color: #333333;
+}
+
+body.dark-theme .project-card{
+    background-color: #333333;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header ==============================*/
+header {
+    background-color: #333;
+    padding: 10px 0;
+    height: 35px;
+    padding-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+ }
+
+ nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+ }
+
+ nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+ }
+
+ nav ul li a:hover {
+    color: #f4b41a;
+ }
+
+ header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+ }
+
+ /* Section About =====================*/
+
+.MyPhoto {
+    width: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: f4f4f4;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+@media(max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+    #about img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+ /* Section skills =====================*/
+
+ #skills {
+    padding: 20px;
+    text-align: center;
+ }
+
+ #skills h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+ }
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ .skills-buttom {
+    background-color: #f4f4f4;
+ }
+
+ #skills ul li {
+    margin: 10px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: backgound-color 0.3s;
+ }
+
+#skills ul li:hover {
+    background-color: #f4b41a;
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+    #skills ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills ul li {
+        width: 80%;
+    }
+}
+
+ /* Section Project =====================*/
+
+#projects {
+    padding: 20px;
+    text-align: center;
+}
+
+#projects h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rbga(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rbga(0, 0, 0, 0.9);
+}
+
+@media (max-widht: 768px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
+
+ /* Section Contact =====================*/
+
+#contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+
+#contact h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contact label {
+    font-size: 1em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-wigth: 768px) {
+    #contact form {
+        width: 100%;
+    }
+
+    #contact input,
+    #contact textarea {
+        width: 100%;
+    }
+}
+
+/* footer ================*/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.footer-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+} 
+
+.social li {
+    margin: 0 10px;
+}
+
+.social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.social a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    border-top: 1 solid #555;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+@media (max-widht: 768px) {
+    .social {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social li {
+        margin-bottom: 10px;
+    }
+}
+/* button: Back To Top================*/
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2 ease;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    #backToTop {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+#backToTop:active {
+    transform: scale(0.9);
+}
+
+
+/*button theme ==============*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px; /* Розмір перемикача */
+    height: 23px;
+    margin-left: 10px;
+}
+
+/* Стиль слайдера */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 23px; /* Закруглені краї */
+}
+
+/* Колір кола */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; /* Збільшено розмір "кола" */
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Перемикання темної теми */
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(23px); /* Переміщення кола */
+}
+
+/* Стиль для іконок */
+.icon {
+    font-size: 12px; /* Розмір іконок */
+    position: absolute;
+    top: 50%; /* Розташування по вертикалі */
+    transform: translateY(-50%); /* Центрування по вертикалі */
+    transition: opacity 0.4s ease, color 0.4s ease;
+    width: 20px; /* Додаємо ширину, щоб центрувати всередині перемикача */
+    text-align: center; /* Центрування тексту (іконок) */
+}
+
+.sun {
+    left: 2px; /* Ліва позиція для сонця */
+    color: #f1c40f;
+}
+
+.moon {
+    right: 2px; /* Права позиція для місяця */
+    color: #f39c12;
+    opacity: 0.5;
+}
+
+input:checked + .slider .sun {
+    opacity: 0.5; /* Знижуємо прозорість сонця при темній темі */
+}
+
+input:checked + .slider .moon {
+    opacity: 1; /* Повна видимість місяця при темній темі */
+}
+/*button language ==============*/
+
+.language-switcher {
+    display: flex;
+    gap: 10px; /* Відстань між кнопками */
+    align-items: center;
+}
+
+.lang-btn {
+    padding: 5px 12px;
+    border: 2px solid transparent; /* Без рамки, поки кнопка не активна */
+    border-radius: 5px; /* Закруглені кути */
+    background-color: #f1f1f1; /* Світлий фон для кнопки */
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333; /* Темний колір тексту */
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: #ddd; /* Легкий темніший фон при наведенні */
+    border: 2px solid #ccc; /* Рамка при наведенні */
+}
+
+.lang-btn.active {
+    background-color: #4caf50; /* Фон активної кнопки (зелений або будь-який інший) */
+    color: white; /* Білий текст для активної кнопки */
+    border: 2px solid #4caf50; /* Зелена рамка для активної кнопки */
+}
+
+/* Адаптивні стилі для мовних кнопок на мобільних пристроях */
+@media (max-width: 768px) {
+    .lang-btn {
+        padding: 5px 10px;
+        font-size: 12px; /* Трохи зменшуємо розмір тексту на мобільних пристроях */
+    }
+}

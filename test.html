@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Switcher</title>
+</head>
+<body>
+    <style>
+      .switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff; /* Світлий колір для початкової теми */
+    transition: background-color 0.4s ease;
+    border-radius: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 32px;
+    width: 32px;
+    background-color: #f1c40f; /* Колір для сонця */
+    transition: transform 0.4s ease;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+}
+
+/* Іконки сонця і місяця */
+.icon {
+    font-size: 18px;
+    transition: opacity 0.4s ease;
+}
+
+.sun {
+    color: #f1c40f; /* Жовтий для сонця */
+}
+
+.moon {
+    color: #f39c12; /* Помаранчевий для місяця */
+    opacity: 0;
+}
+
+/* Стан при перемиканні (темна тема) */
+input:checked + .slider {
+    background-color: #333; /* Темний фон для перемикача */
+}
+
+input:checked + .slider:before {
+    transform: translateX(40px); /* Зміщення для тумблера */
+    background-color: #f39c12; /* Колір для місяця */
+}
+
+input:checked + .slider .moon {
+    opacity: 1;
+}
+
+input:checked + .slider .sun {
+    opacity: 0;
+}
+    </style>
+    <section>
+        <h2 id="about">About Me</h2>
+        <p id="skills">Skills</p>
+        <p id="projects">Projects</p>
+        <p id="contact">Contact Me</p>
+    </section>
+
+    <div class="language-switcher">
+        <button id="en" class="lang-btn">English</button>
+        <button id="ua" class="lang-btn">Українська</button>
+    </div>
+
+    <div class="theme-switcher">
+        <label class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider">
+                <span class="icon sun">☀️</span>
+                <span class="icon moon">🌙</span>
+            </span>
+        </label>
+    </div>
+
+    <script>
+        // Оголошення об'єкта translations
+        const translations = {
+            en: {
+                about: "About Me",
+                skills: "Skills",
+                projects: "Projects",
+                contact: "Contact Me"
+            },
+            ua: {
+                about: "Про мене",
+                skills: "Навички",
+                projects: "Проекти",
+                contact: "Зв'язатися зі мною"
+            }
+        };
+
+        // Функція для зміни тексту
+        function changeLanguage(lang) {
+            document.getElementById('about').textContent = translations[lang].about;
+            document.getElementById('skills').textContent = translations[lang].skills;
+            document.getElementById('projects').textContent = translations[lang].projects;
+            document.getElementById('contact').textContent = translations[lang].contact;
+        }
+
+        // Додаємо слухач події для кнопок мов
+        document.getElementById('en').addEventListener('click', function() {
+            changeLanguage('en');
+        });
+
+        document.getElementById('ua').addEventListener('click', function() {
+            changeLanguage('ua');
+        });
+
+        const themeToggle = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+// Функція для зміни теми
+function switchTheme() {
+    if (themeToggle.checked) {
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Встановлюємо початковий стан
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+    themeToggle.checked = true;
+}
+
+// Слухач подій для перемикання теми
+themeToggle.addEventListener('change', switchTheme);
+    </script>
+</body>
+</html>
