@@ -61,12 +61,12 @@ function changeLanguage(lang) {
     }
 }
 // Додаємо слухач події для кнопок мов
-document.getElementById('en').addEventListener('click', function() {
+document.getElementById('lang-en').addEventListener('click', function() {
     changeLanguage('en');
 });
 
 
-document.getElementById('ua').addEventListener('click', function() {
+document.getElementById('lang-ua').addEventListener('click', function() {
     changeLanguage('ua');
 });
 
